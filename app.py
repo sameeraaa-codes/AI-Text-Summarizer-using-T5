@@ -12,12 +12,10 @@ app = FastAPI(title="Text Summarizer App", description="Text Summarization using
 model = T5ForConditionalGeneration.from_pretrained("./saved_summary_model")
 tokenizer = T5Tokenizer.from_pretrained("./saved_summary_model")
 
-# device
+# devicerr
 if torch.backends.mps.is_available():
     device = torch.device("mps")
-elif torch.cuda.is_availanle():
-    device = torch.device("cuda")
-else:
+elif torch
     device = torch.device("cpu")
 
 model.to(device)
